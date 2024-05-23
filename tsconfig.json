@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,   // Add this line to skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts"]
+  }
+  

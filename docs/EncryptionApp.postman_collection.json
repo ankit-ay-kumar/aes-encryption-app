@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "6d9be93c-63c6-43a9-9c03-7f227198532a",
+		"name": "EncryptionApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3519252"
+	},
+	"item": [
+		{
+			"name": "getEncryptedAesKeyByRsaPublicKey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "browserId",
+						"value": "6f56c6f7-0128-427d-b8a4-3c26439e9438",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"publicKey\": \"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjlF7R0LQXauOiR5nXTsE\\n4rnDvLcYVWAZ3o7Ln2suyAS+eJfvta0fXhpbApnGngdqwudZdDuXa/IEfeYLt7YO\\nQ+mHWXVAp8WpxJR0ZWTA3WSoyOjCMBZSidWckv1u2BVjABTnCUEgL6hsOpRpf1bk\\np43dOj/v3MvJqj+Z6+Jl/mgDWeLFmGpehTgNh9B6cFZS1/XX34u6a65ZmwS/JY1k\\nTK5XVjLHjuD3Z9Yv3BRFwEWOx0+gUkNcPJTDX72He2OYXFpuYDfXnam/kXIgpYye\\nfC4G7a6LBTh6q0YCKN+aaTymb1NQJRr6cP0YTsylK66edy9eYzcmSw6TgAoW18t2\\nZQIDAQAB\\n-----END PUBLIC KEY-----\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/aesKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aesKey"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getEncryptedAesKeyByRsaPublicKey",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "browserId",
+								"value": "6f56c6f7-0128-427d-b8a4-3c26439e9438",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"publicKey\": \"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjlF7R0LQXauOiR5nXTsE\\n4rnDvLcYVWAZ3o7Ln2suyAS+eJfvta0fXhpbApnGngdqwudZdDuXa/IEfeYLt7YO\\nQ+mHWXVAp8WpxJR0ZWTA3WSoyOjCMBZSidWckv1u2BVjABTnCUEgL6hsOpRpf1bk\\np43dOj/v3MvJqj+Z6+Jl/mgDWeLFmGpehTgNh9B6cFZS1/XX34u6a65ZmwS/JY1k\\nTK5XVjLHjuD3Z9Yv3BRFwEWOx0+gUkNcPJTDX72He2OYXFpuYDfXnam/kXIgpYye\\nfC4G7a6LBTh6q0YCKN+aaTymb1NQJRr6cP0YTsylK66edy9eYzcmSw6TgAoW18t2\\nZQIDAQAB\\n-----END PUBLIC KEY-----\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/aesKey",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"aesKey"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "encryptProcessedPayload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "browserId",
+						"value": "6f56c6f7-0128-427d-b8a4-3c26439e9438",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"encryptedPayload\": \"jZW4pw4gXFWbY3GR+p7kkA==IUr+r3Y6qnOkK7OumxTFaqn3jeRifgFKbWmVTJpya3w+ye0KyFIL0zIB1WHVmNjIBiGciTSiX12MCI0iYI9D0Aol1oyag+H0Ublx594IrwaqCWOcbBkJxnBIZyoyLQTcrzI3+3NhNAwamvPsvJfXYOt4opelEtmfa6pEcr0YyIf/BmYjkmLipgJLLf0vZHJ4drOxHEDvXlk6mfSD52RBJhsx2TSCD5HMXd9nZvY2ZMift52N7TIWNQTCD+JwgKBIyXb6FRQwRbtl4cdD2LEh4A==\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/payload/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"payload",
+						"process"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "encryptProcessedPayload",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "browserId",
+								"value": "6f56c6f7-0128-427d-b8a4-3c26439e9438",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"encryptedPayload\": \"jZW4pw4gXFWbY3GR+p7kkA==IUr+r3Y6qnOkK7OumxTFaqn3jeRifgFKbWmVTJpya3w+ye0KyFIL0zIB1WHVmNjIBiGciTSiX12MCI0iYI9D0Aol1oyag+H0Ublx594IrwaqCWOcbBkJxnBIZyoyLQTcrzI3+3NhNAwamvPsvJfXYOt4opelEtmfa6pEcr0YyIf/BmYjkmLipgJLLf0vZHJ4drOxHEDvXlk6mfSD52RBJhsx2TSCD5HMXd9nZvY2ZMift52N7TIWNQTCD+JwgKBIyXb6FRQwRbtl4cdD2LEh4A==\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payload/process",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payload",
+								"process"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
